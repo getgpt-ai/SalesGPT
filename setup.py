@@ -1,17 +1,28 @@
 import os
-
 from setuptools import find_packages, setup
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
 
 def get_long_description():
+    """
+    Retrieve the long description of the project from README.md file.
+
+    Returns:
+        str: The content of the README.md file.
+    """
     readme_path = os.path.join(base_dir, "README.md")
     with open(readme_path, encoding="utf-8") as readme_file:
         return readme_file.read()
 
 
 def get_project_version():
+    """
+    Retrieve the project version from version.py file.
+
+    Returns:
+        str: The version of the project.
+    """
     version_path = os.path.join(base_dir, "salesgpt", "version.py")
     version = {}
     with open(version_path, encoding="utf-8") as fp:
@@ -20,6 +31,15 @@ def get_project_version():
 
 
 def get_requirements(path):
+    """
+    Retrieve the list of requirements from a given requirements file.
+
+    Args:
+        path (str): Path to the requirements file.
+
+    Returns:
+        list: List of requirements.
+    """
     with open(path, encoding="utf-8") as requirements:
         return [requirement.strip() for requirement in requirements]
 
