@@ -1,4 +1,4 @@
-# :robot: SalesGPT - Your Context-Aware AI Sales Assistant
+# :robot: SalesGPT - Your Context-Aware AI Sales Assistant Okay
 
 This repo demonstrates an implementation of a **context-aware** AI Sales Assistant using LLMs.
 
